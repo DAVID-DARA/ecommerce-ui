@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'paradise_love';
+    src: url('../../assets/fonts/ParadiseLove.ttf') format('ttf');
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-family: 'paradise_love';
+}
+
+.header span {
+    font-size: 20px;
+}
