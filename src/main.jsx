@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import HomePage from './pages/HomePage/HomePage';
-import LoginPage from './pages/LoginPage/LoginPage';
+import HomePage from './pages/Homepage/HomePage';
+import LoginPage from './pages/Loginpage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 
 const router = createBrowserRouter([
