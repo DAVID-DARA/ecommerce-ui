@@ -25,6 +25,7 @@
 .signup .section .signup-left {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .content {
