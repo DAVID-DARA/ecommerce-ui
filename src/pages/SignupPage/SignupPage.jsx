@@ -12,7 +12,7 @@ const SignupPage = () => {
     const [password, setPassword] = useState("");
 
     
-    const signup_request = {
+    const signupRequestDto = {
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -21,16 +21,17 @@ const SignupPage = () => {
 
     const sendRequest = () => {
         axios
-            .post("http://localhost:4032/signup", signup_request)
+            .post("http://localhost:4032/api/user/signup", signupRequestDto)
             .then((response => {
                 const signupResposne = response.data;
                 console.log(signupResposne);
 
-                if (response.status == 200) {
+                if (response.status == 201) {
                     redirect("/home")
                     console.log("Successful Signup")
                 } else {
                     console.log("Failed Signup")
+                    console.log()
                 }
             }))
     }

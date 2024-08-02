@@ -1,6 +1,7 @@
 import "./HomePage.css"
 import Navigation from "../../components/Navbar/Navigation"
 import summer_fit from "../../assets/images/test.png"
+import summer_fit_two from "../../assets/images/main.png"
 import star from "../../assets/new-icons/star-ico.png"
 import right_arrow from "../../assets/new-icons/right-arrow.png"
 
@@ -23,7 +24,8 @@ const HomePage = () => {
                             <button className="shop">Shop Now &nbsp; <img src={right_arrow} width="20px" alt="" /></button>
                         </div>
                         <div className="home-right">
-                            <img src={summer_fit} className="" alt="Summer-sales-outfit" width="350px" />
+                            <img src={summer_fit} className="home-main-img-one" alt="Summer-sales-outfit" width="350px" />
+                            <img src={summer_fit_two} className="home-main-img-two" alt="" width="415px" />
                         </div>
                     </div>
                 </div>

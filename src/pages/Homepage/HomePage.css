@@ -70,4 +70,15 @@
     display: flex;
     justify-content: center;
 }
+    .home-main-img-one {
+        z-index: 1;
+        position: relative;
+        right: 20%;
+    }
+
+    .home-main-img-two {
+        z-index: 0;
+        position: absolute;
+        left: 67%;
+    }
 
