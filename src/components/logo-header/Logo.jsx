@@ -5,7 +5,7 @@ const Logo_Header = () => {
     return (
         <>
             <div className="header">
-                <img src={icon} alt="" width="60px" />
+                <img src={icon} alt="" width="50px" />
                 <span>&nbsp; Lorem</span>
             </div>
         </>

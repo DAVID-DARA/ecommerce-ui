@@ -1,84 +1,59 @@
 import "./LoginPage.css"
-import Logo_Header from "../../components/logo-header/Logo";
 import { useState } from "react";
-import axios from "axios";
-import { redirect } from "react-router-dom";
+import Logo_Header from "../../components/logo-header/Logo";
+import { Link } from "react-router-dom";
+import google from "../../assets/new-icons/google.png"
 
 const LoginPage = () => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    function emailChange (event) {
+        setEmail(event.target.vslue);
+    }
     
-    const signup_request = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: password,
-    };
-
-    const sendRequest = () => {
-        axios
-            .post("http://localhost:4032/signup", signup_request)
-            .then((response => {
-                const signupResposne = response.data;
-                console.log(signupResposne);
-
-                if (response.status == 200) {
-                    redirect("/home")
-                    console.log("Successful Signup")
-                } else {
-                    console.log("Failed Signup")
-                }
-            }))
-    }
-
-    function firstNameChange(event) {
-        setFirstName(event.target.value);
-    }
-
-    function lastNameChange(event) {
-        setLastName(event.target.value)
-    }
-
-    function emailChange(event) {
-        setEmail(event.target.value)
-    }
-
     function passwordChange(event) {
-        setPassword(event.target.value)
+        setPassword(event.target.value);
     }
 
     return (
         <>
             <div className="login">
-                <div className="section">
-                    <div className="left">
-                        <div className="content">
+                <div className="login-section">
+                    <div className="login-left">
+                        <div className="login-left-content">
                             <Logo_Header />
-                            <p className="head">Sign up</p>
-                            <p className="text-one">Fill in information below or register with your social account</p>
-                            <div className="name-form">
-                                <div className="labels">
-                                    <span>First Name *</span><br />
-                                    <input type="text" placeholder="Enter First Name" onChange={firstNameChange} value={firstName} className="name" />
+                            <p className="login-left-head">Sign In</p>
+                            <p className="login-left-text-one">Please fill your details to access your account</p>
+
+                            <span className="login-labels">Email *</span><br />
+                            <input className="login-input" type="text" placeholder="Email" onChange={emailChange} value={email}/> <br />
+                            <span className="login-labels">Password *</span><br />
+                            <input className="login-input" type="password" placeholder="Password" onChange={passwordChange} value={password}/> <br />
+                            <div className="login-checkbox-password">
+                                <div className="login-checkbox">
+                                    <input type="checkbox" name="" id="" /> &nbsp;
+                                    <span className="login-checkbox-text">Remember me</span>
                                 </div>
-                                <div className="labels">
-                                    <span>Last Name *</span><br />
-                                    <input type="text" placeholder="Enter Last Name" onChange={lastNameChange} value={lastName} className="name" /><br />
+                                <div className="login-reset-password">
+                                    <Link to="/"><span className="login-forgot-pword">Forgot Password?</span></Link>
                                 </div>
                             </div>
-                            <span>Email *</span><br />
-                            <input type="text" placeholder="Email" onChange={emailChange} value={email}/> <br />
-                            <span>Password *</span><br />
-                            <input type="password" placeholder="Password" onChange={passwordChange} value={password}/> <br />
-                            <input type="checkbox" name="remember" /><span>Rememebr me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-                            {/* <a href="/login-page">Forgot Password</a> */}
-                            <input type="button" value="Sign up" onClick={sendRequest} />
+
+                            <input className="login-input login-button" type="button" value="Sign up" />
+
+                            <div className="login-hr">
+                                <hr className="login-hr-line" />&nbsp;&nbsp;
+                                <span className="login-hr-text">or Sign Up with</span>&nbsp;&nbsp;
+                                <hr className="login-hr-line"/>
+                            </div>
+
+                            <button className="login-google"><img src={google} alt=""  width="13px"/>&nbsp;Sign Up With Google</button>
+                            <p className="login-signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
                         </div>
                     </div>
-                    <div className="right">
+                    <div className="login-right">
+
                     </div>
                 </div>
             </div>

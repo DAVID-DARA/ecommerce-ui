@@ -1,14 +1,11 @@
-@font-face {
-    font-family: 'paradise_love';
-    src: url('../../assets/fonts/ParadiseLove.ttf') format('ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
 
 .header {
     display: flex;
     align-items: center;
-    font-family: 'paradise_love';
+    font-family: 'Love Light';
 }
 
 .header span {
-    font-size: 20px;
+    font-size: 30px;
 }

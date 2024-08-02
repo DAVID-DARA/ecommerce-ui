@@ -11,18 +11,18 @@ const HomePage = () => {
                 <Navigation />
                 <div className="section-one">
                     <div className="main">
-                        <div className="left">
+                        <div className="home-left">
                             <div className="summer-sale-info">
-                                <img src={star} alt="" width="20px" />&nbsp; <span>50% OFF Summer Super Sale</span>
+                                <img src={star} alt="" width="20px" />&nbsp; <span className="summer-sale-info-text">50% OFF Summer Super Sale</span>
                             </div>
                             <p className="info-text">Step into Style: Your </p>
                             <p className="info-text">Ultimate Fashion Destination</p>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            <span className="info-span-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore
                             </span>
                             <button className="shop">Shop Now &nbsp; <img src={right_arrow} width="20px" alt="" /></button>
                         </div>
-                        <div className="right">
+                        <div className="home-right">
                             <img src={summer_fit} className="" alt="Summer-sales-outfit" width="350px" />
                         </div>
                     </div>

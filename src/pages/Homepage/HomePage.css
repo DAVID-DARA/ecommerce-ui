@@ -17,18 +17,18 @@
     justify-content: center;
 }
 
-.main .left {
+.main .home-left {
     width: 50%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
 }
 
-.main .left .summer-sale-info {
+.main .home-left .summer-sale-info {
     border-radius: 50px;
     background-color: #ffffff;
     padding: 5px;
-    width: 45%;
+    width: 50%;
     margin: 20px 0;
     display: flex;
     align-items: center;
@@ -36,18 +36,23 @@
     /* font-weight: bold; */
 }
 
-.left .info-text {
+.home-left .summer-sale-info-text {
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.home-left .info-text {
     font-size: 36px;
     font-weight: 500;
     margin: 0 0 25px 0;
 }
 
-.left span {
+.home-left .info-span-text {
     font-size: 14px;
     line-height: 35px;
 }
 
-.left .shop {
+.home-left .shop {
     width: 30%;
     padding: 20px;
     margin: 25px 0;
@@ -60,7 +65,7 @@
     color: #ffffff;
 }
 
-.main .right {
+.main .home-right {
     width: 50%;
     display: flex;
     justify-content: center;
