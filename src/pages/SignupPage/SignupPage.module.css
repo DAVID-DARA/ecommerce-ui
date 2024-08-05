@@ -9,7 +9,7 @@
     font-family: "Manrope";
 }
 
-.signup .section {
+.section {
     width: 98%;
     height: 96%;
     display: grid;
@@ -17,33 +17,33 @@
     grid-template-rows: 1fr;
 }
 
-.signup .signup-labels {
+.signupLabels {
     font-weight: 500;
     font-size: 14px;
 }
 
-.signup .section .signup-left {
+.signupLeft {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content {
+.signupContent {
     width: 65%;
 }
 
-.content .head {
+.head {
     font-size: 25px;
     font-weight: bolder;
     margin: 20px 0 10px 0;
 }
 
-.content .text-one {
+.textOne {
     font-size: 13px;
     margin: 0 0 20px 0;
 }
 
-.name-form {
+.nameForm {
     width: 100%;
     display: grid;
     grid-template-columns: 40% 40%;
@@ -51,24 +51,23 @@
     margin: 20px 0;
 }
 
-.name-form input {
+.name {
     width: 100%;
     padding: 8px;
-    /* margin: 0px 0; */
 }
 
-.signup-input{
+.signupInput {
     width: 95%;
     padding: 8px;
     margin: 5px 0 15px 0;
 }
 
-input[type = "checkbox"] {
+input[type="checkbox"] {
     width: auto;
     margin: 0 0 20px 0;
 }
 
-.signup-button {
+.signupButton {
     width: 102%;
     background-color: #3E1800;
     color: white;
@@ -76,20 +75,20 @@ input[type = "checkbox"] {
     cursor: pointer;
 }
 
-.signup .signup-checkbox-text {
+.signupCheckboxText {
     font-size: 12px;
 }
 
-.signup-left .signup-hr-line {
+.signupHrLine {
     width: 36%;
     display: inline-block;
 }
 
-.signup-left .signup-hr-text {
+.signupHrText {
     font-size: 12px;
 }
 
-.signup-left .signup-google {
+.signupGoogle {
     width: 102%;
     padding: 8px;
     margin: 20px 0;
@@ -101,17 +100,17 @@ input[type = "checkbox"] {
     border: 1px solid black;
 }
 
-.signup-google .signup-google-text {
+.signupGoogleText {
     font-size: 13px;
 }
 
-.signup-left .signup-signin-link {
+.signupSigninLink {
     text-align: center;
     font-size: 13px;
     margin: 10px 0;
 }
 
-.signup-right {
+.signupRight {
     background-image: url(../../assets/images/one.jpg);
     background-repeat: no-repeat;
     background-position: center;
