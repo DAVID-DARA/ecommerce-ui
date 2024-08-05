@@ -27,9 +27,13 @@ const router = createBrowserRouter([
     element: <VerifyPage />
   },
   {
-    path: '/dashboard',
+    path: '/account',
     element: <h1>Dashboard Page</h1>
   }, 
+  {
+    path: 'forgot-password',
+    element: <h1>Account</h1>
+  }
 
 ]);
 

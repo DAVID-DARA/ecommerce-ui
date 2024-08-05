@@ -3,6 +3,8 @@ import Logo_Header from "../../components/logo-header/Logo";
 import { useEffect, useRef, useState } from "react";
 import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import axiosClient from "../../api/axiosClient";
 
 const VerifyPage = () => {
     const inputs = useRef([]);
@@ -10,6 +12,8 @@ const VerifyPage = () => {
     const [otp, setOtp] = useState(Array(6).fill(""));
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const userEmail = localStorage.getItem("userEmail");
@@ -56,13 +60,18 @@ const VerifyPage = () => {
             return;
         }
         setLoading(true);
-        axios
-            .post("http://localhost:4032/api/user/verify", verificationRequestDto)
+
+        axiosClient
+            .post("/user/verify", verificationRequestDto)
             .then((response) => {
                 const verificationResponse = response.data;
                 console.log(response)
                 console.log(verificationResponse);
-                // Handle successful response
+                if (response.status === 200 ) {
+                    console.log(response.data.token);
+                    localStorage.setItem("accessToken", response.data.token);
+                    navigate("/");
+                }
             })
             .catch((error) => {
                 console.error("There was an error during the verification request:", error);

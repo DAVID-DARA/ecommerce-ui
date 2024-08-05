@@ -9,6 +9,7 @@ import Logo_Header from "../../components/logo-header/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import google from "../../assets/new-icons/google.png";
 import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator";
+import axiosClient from "../../api/axiosClient";
 
 // Validation schema
 const validationSchema = Yup.object({
@@ -45,7 +46,7 @@ const SignupPage = () => {
             setError("");
 
             try {
-                const response = await axios.post("http://localhost:4032/api/user/signup", values);
+                const response = await axiosClient.post("/user/signup", values);
                 if (response.status === 201) {
                     localStorage.setItem("userEmail", values.email);
                     navigate('/verify');
