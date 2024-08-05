@@ -1,0 +1,73 @@
+.verify {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope";
+}
+
+.verify .verify-section {
+    width: 98%;
+    height: 96%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+}
+
+    .verify-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .verify-left .verify-left-content {
+        width: 70%;
+    }
+
+        .verify-left-head {
+            font-size: 25px;
+            font-weight: bolder;
+            margin: 20px 0 10px 0;
+        }
+
+        .verify-left-text-one {
+            font-size: 13px;
+            margin: 0 0 20px 0;
+        }
+
+        .verify-box-head {
+            font-weight: bold;
+            margin: 50px 0px 10px 0;
+        }
+
+        .verify-button {
+            width: 95%;
+            padding: 12px;
+            margin: 30px 0;
+            border: 0;
+            background-color: #3E1800;
+            color: white;
+        }
+
+        .verify-resend-text {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .verify-resend-button {
+            background-color: white;
+            border: 0;
+            font-size: 14px;
+            color: #3E1800;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+
+    .verify-right {
+        background-image: url(../../assets//images/verify-page.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
