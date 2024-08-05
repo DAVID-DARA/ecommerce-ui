@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
 
-.header {
+.logo {
     display: flex;
     align-items: center;
     font-family: 'Love Light';
 }
 
-.header span {
+.logo span {
     font-size: 30px;
 }
+
+.logo .logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+    .logo-link:active {
+        color: black;
+    }

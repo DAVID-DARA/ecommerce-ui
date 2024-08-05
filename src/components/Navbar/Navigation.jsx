@@ -5,6 +5,7 @@ import search from "../../assets/new-icons/search.png"
 import wishlist from "../../assets/new-icons/wishlist.png"
 import cart from "../../assets/new-icons/cart.png"
 import user from "../../assets/new-icons/account.png"
+import Logo_Header from "../logo-header/Logo";
 
 
 
@@ -14,8 +15,7 @@ const Navigation = () => {
             <div className="main-bar">
                 <div className="nav-items">
                     <div className="left">
-                        <img src={logo} width={50} height={50} />
-                        <span>Lorem</span>
+                        <Logo_Header />
                     </div>
                     <div className="middle">
                         <ul>
