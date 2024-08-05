@@ -9,17 +9,12 @@
     font-family: "Manrope";
 }
 
-.section {
+.signupSection {
     width: 98%;
     height: 96%;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr;
-}
-
-.signupLabels {
-    font-weight: 500;
-    font-size: 14px;
 }
 
 .signupLeft {
@@ -28,7 +23,7 @@
     align-items: center;
 }
 
-.signupContent {
+.signupLeftContent {
     width: 65%;
 }
 
@@ -41,6 +36,11 @@
 .textOne {
     font-size: 13px;
     margin: 0 0 20px 0;
+}
+
+.signupLabels {
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .nameForm {
@@ -68,7 +68,7 @@ input[type="checkbox"] {
 }
 
 .signupButton {
-    width: 102%;
+    width: 100%;
     background-color: #3E1800;
     color: white;
     border: 0;
@@ -89,7 +89,7 @@ input[type="checkbox"] {
 }
 
 .signupGoogle {
-    width: 102%;
+    width: 100%;
     padding: 8px;
     margin: 20px 0;
     cursor: pointer;
@@ -111,7 +111,7 @@ input[type="checkbox"] {
 }
 
 .signupRight {
-    background-image: url(../../assets/images/one.jpg);
+    background-image: url(../../assets/images/signup-image.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

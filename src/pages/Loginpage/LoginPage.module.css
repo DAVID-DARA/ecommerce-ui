@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope";
+}
+
+.loginSection {
+    width: 98%;
+    height: 96%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+}
+
+.loginLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginLeftContent {
+    width: 65%;
+}
+
+.loginLeftHead {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 20px 0 10px 0;
+}
+
+.loginLeftTextOne {
+    font-size: 13px;
+    margin: 0 0 20px 0;
+}
+
+.loginLabels {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.loginInput {
+    width: 95%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+}
+
+.loginCheckboxPassword {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginCheckboxText {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.loginForgotPword {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.loginButton {
+    width: 102%;
+    background-color: #3E1800;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.loginHrLine {
+    width: 36%;
+    display: inline-block;
+}
+
+.loginHrText {
+    font-size: 12px;
+}
+
+.loginGoogle {
+    width: 102%;
+    padding: 8px;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.loginGoogleText {
+    font-size: 13px;
+}
+
+.loginSignupLink {
+    text-align: center;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.loginRight {
+    background-image: url(../../assets/images/login-image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}

@@ -1,37 +1,48 @@
-import "./HomePage.css"
-import Navigation from "../../components/Navbar/Navigation"
-import summer_fit from "../../assets/images/test.png"
-import summer_fit_two from "../../assets/images/main.png"
-import star from "../../assets/new-icons/star-ico.png"
-import right_arrow from "../../assets/new-icons/right-arrow.png"
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './HomePage.module.css';
+import Navigation from '../../components/Navbar/Navigation';
+import summerFit from '../../assets/images/test.webp';
+import summerFitTwo from '../../assets/images/main.webp';
+import starIcon from '../../assets/new-icons/star-ico.png';
+import rightArrowIcon from '../../assets/new-icons/right-arrow.png';
 
 const HomePage = () => {
-    return (
-        <>
-            <div className="Home">
-                <Navigation />
-                <div className="section-one">
-                    <div className="main">
-                        <div className="home-left">
-                            <div className="summer-sale-info">
-                                <img src={star} alt="" width="20px" />&nbsp; <span className="summer-sale-info-text">50% OFF Summer Super Sale</span>
-                            </div>
-                            <p className="info-text">Step into Style: Your </p>
-                            <p className="info-text">Ultimate Fashion Destination</p>
-                            <span className="info-span-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore
-                            </span>
-                            <button className="shop">Shop Now &nbsp; <img src={right_arrow} width="20px" alt="" /></button>
-                        </div>
-                        <div className="home-right">
-                            <img src={summer_fit} className="home-main-img-one" alt="Summer-sales-outfit" width="350px" />
-                            <img src={summer_fit_two} className="home-main-img-two" alt="" width="415px" />
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className={styles.home}>
+      <Navigation />
+      <div className={styles.sectionOne}>
+        <div className={styles.main}>
+          <div className={styles.homeLeft}>
+            <div className={styles.summerSaleInfo}>
+              <img src={starIcon} alt="Star Icon" width="20px" />
+              <span className={styles.summerSaleInfoText}>50% OFF Summer Super Sale</span>
             </div>
-        </>
-    );
-}
+            <p className={styles.infoText}>Step into Style: Your</p>
+            <p className={styles.infoText}>Ultimate Fashion Destination</p>
+            <span className={styles.infoSpanText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            </span>
+            <button className={styles.shop}>
+              Shop Now <img src={rightArrowIcon} alt="Right Arrow" width="20px" />
+            </button>
+          </div>
+          <div className={styles.homeRight}>
+            <img src={summerFit} className={styles.homeMainImgOne} alt="Summer sales outfit" width="350px" />
+            <img src={summerFitTwo} className={styles.homeMainImgTwo} alt="Main outfit" width="415px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+HomePage.propTypes = {
+  starIcon: PropTypes.string.isRequired,
+  rightArrowIcon: PropTypes.string.isRequired,
+  summerFit: PropTypes.string.isRequired,
+  summerFitTwo: PropTypes.string.isRequired,
+};
 
 export default HomePage;

@@ -6,11 +6,13 @@ import HomePage from './pages/Homepage/HomePage';
 import LoginPage from './pages/Loginpage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import VerifyPage from './pages/VerificationPage/VerifyPage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />
+    element: <HomePage />,
+    errorElement: <ErrorPage />
   },
   {
     path: '/login',
@@ -27,7 +29,8 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <h1>Dashboard Page</h1>
-  }
+  }, 
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
