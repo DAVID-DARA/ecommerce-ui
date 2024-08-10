@@ -1,29 +1,34 @@
+import axios from "axios";
+import * as Yup from "yup";
+import { useFormik } from "formik";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import * as Yup from "yup";
 
 import styles from "./LoginPage.module.css";
 import Logo_Header from "../../components/logo-header/Logo";
 import google from "../../assets/new-icons/google.png";
-import axios from "axios";
-import { useFormik } from "formik";
+import useAssetsLoader from "../../hooks/useAssetsLoader";
+import Preloader from "../../components/Preloader/Preloader";
 
 const validationSchema = Yup.object({
     email: Yup.string().required("email is required"),
     password: Yup.string().required("password is required")
-})
+});
 
 const LoginPage = () => {
+    const assets = [google, Logo_Header];
+    const assetsLoading = useAssetsLoader(assets);
+
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
     useEffect(() => {
         if (error) {
-            const timer =setTimeout(() => {
-                setError("")
-            }, 10000)
-            return  (() => clearTimeout(timer))
+            const timer = setTimeout(() => {
+                setError("");
+            }, 10000);
+            return () => clearTimeout(timer);
         }
     }, [error]);
 
@@ -38,19 +43,22 @@ const LoginPage = () => {
             setError("");
 
             try {
-                const loginResposne = await axios.post("http://localhost:4032/api/user/login", values)
+                const response = await axios.post("http://localhost:4032/api/user/login", values);
                 if (response.status === 200) {
                     localStorage.setItem("accessToken", response.data.token);
                     navigate("/");
                 }
-
             } catch (error) {
                 setError("There was an error during the login request.");
             } finally {
                 setLoading(false);
             }
         }
-    })
+    });
+
+    if (assetsLoading) {
+        return <Preloader />;
+    }
 
     return (
         <div className={styles.login}>
@@ -84,7 +92,7 @@ const LoginPage = () => {
                                     <label htmlFor="rememberMe" className={styles.loginCheckboxText}>Remember me</label>
                                 </div>
                                 <div className={styles.loginResetPassword}>
-                                    <Link to="/"><span className={styles.loginForgotPword}>Forgot Password?</span></Link>
+                                    <Link to="/forgot-password"><span className={styles.loginForgotPword}>Forgot Password?</span></Link>
                                 </div>
                             </div>
                             <button type="submit" className={`${styles.loginInput} ${styles.loginButton}`}>Sign In</button>

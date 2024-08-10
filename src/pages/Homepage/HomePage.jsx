@@ -7,8 +7,17 @@ import summerFit from '../../assets/images/test.webp';
 import summerFitTwo from '../../assets/images/main.webp';
 import starIcon from '../../assets/new-icons/star-ico.png';
 import rightArrowIcon from '../../assets/new-icons/right-arrow.png';
+import Preloader from '../../components/Preloader/Preloader';
+import useAssetsLoader from '../../hooks/useAssetsLoader';
 
 const HomePage = () => {
+  const assets = [summerFit, summerFitTwo, starIcon, rightArrowIcon];
+  const assetsLoading = useAssetsLoader(assets);
+
+  if (assetsLoading) {
+    return <Preloader />;
+  }
+
   return (
     <div className={styles.home}>
       <Navigation />

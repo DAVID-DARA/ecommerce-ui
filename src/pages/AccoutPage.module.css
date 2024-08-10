@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.accountPage {
+    width: 100%;
+}
+
+.pageInfo {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.438);
+    font-family: "Manrope";
+}
+
+.pageInfoContent {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountPageMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.accountPageContent {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 70%;
+    gap: 5%;
+    grid-template-rows: 1fr;
+}
+
+.left {
+    background-color: aqua;
+}
+
+.right {
+    /* width: 100%;
+    background-color: black; */
+}

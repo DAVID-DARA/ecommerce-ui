@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.accountSidebar {
+    width: 100%;
+}
+
+.sidebarItems {
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    font-family: 'Manrope';
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.644);
+    background-color: white;
+    cursor: pointer;
+}
+
+.active {
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    font-family: 'Manrope';
+    font-weight: bold;
+    text-align: left;
+    border: 0px solid rgba(0, 0, 0, 0.644);
+    background-color: #f4bd62;
+    cursor: pointer;
+}

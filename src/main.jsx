@@ -7,6 +7,8 @@ import LoginPage from './pages/Loginpage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import VerifyPage from './pages/VerificationPage/VerifyPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import ClearMemory from './pages/Clear';
+import AccountPage from './pages/AccountPage';
 
 const router = createBrowserRouter([
   {
@@ -29,10 +31,18 @@ const router = createBrowserRouter([
   {
     path: '/account',
     element: <h1>Dashboard Page</h1>
-  }, 
+  },
   {
-    path: 'forgot-password',
+    path: '/home/account',
+    element: <AccountPage />
+  },
+  {
+    path: '/forgot-password',
     element: <h1>Account</h1>
+  },
+  {
+    path: "/clear-memory",
+    element: <ClearMemory />
   }
 
 ]);

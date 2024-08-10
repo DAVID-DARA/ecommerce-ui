@@ -10,6 +10,8 @@ import { Link, useNavigate } from "react-router-dom";
 import google from "../../assets/new-icons/google.png";
 import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator";
 import axiosClient from "../../api/axiosClient";
+import useAssetsLoader from "../../hooks/useAssetsLoader";
+import Preloader from "../../components/Preloader/Preloader";
 
 // Validation schema
 const validationSchema = Yup.object({
@@ -20,6 +22,9 @@ const validationSchema = Yup.object({
 });
 
 const SignupPage = () => {
+    const assets =  [google, Logo_Header]
+    const assetsLoading = useAssetsLoader(assets);
+
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const navigate = useNavigate();
@@ -58,6 +63,10 @@ const SignupPage = () => {
             }
         }
     });
+
+    if (assetsLoading) {
+        return <Preloader />
+    }
 
     return (
         <div className={styles.signup}>
