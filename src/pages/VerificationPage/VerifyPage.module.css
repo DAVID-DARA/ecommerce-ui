@@ -7,7 +7,7 @@
     font-family: "Manrope";
 }
 
-.verify .verify-section {
+.verify .verify_section {
     width: 98%;
     height: 96%;
     display: grid;
@@ -15,33 +15,33 @@
     grid-template-rows: 1fr;
 }
 
-    .verify-left {
+    .verify_left {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .verify-left .verify-left-content {
+    .verify_left .verify_left_content {
         width: 70%;
     }
 
-        .verify-left-head {
+        .verify_left_head {
             font-size: 25px;
             font-weight: bolder;
             margin: 20px 0 10px 0;
         }
 
-        .verify-left-text-one {
+        .verify_left_text_one {
             font-size: 13px;
             margin: 0 0 20px 0;
         }
 
-        .verify-box-head {
+        .verify_box_head {
             font-weight: bold;
             margin: 50px 0px 10px 0;
         }
 
-        .verify-button {
+        .verify_button {
             width: 95%;
             padding: 12px;
             margin: 30px 0;
@@ -50,12 +50,12 @@
             color: white;
         }
 
-        .verify-resend-text {
+        .verify_resend_text {
             font-size: 14px;
             text-align: center;
         }
 
-        .verify-resend-button {
+        .verify_resend_button {
             background-color: white;
             border: 0;
             font-size: 14px;
@@ -65,7 +65,7 @@
         }
 
 
-    .verify-right {
+    .verify_right {
         background-image: url(../../assets//images/verify-page.jpg);
         background-position: center;
         background-repeat: no-repeat;

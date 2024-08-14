@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+
 import styles from './AccoutPage.module.css';
 import Navigation from '../components/Navbar/Navigation';
-import AccountSidebar from '../components/AccountComponents/AccountSidebar/AccountSidebar'
 import Components from '../components/AccountComponents/AccountComp';
+import AccountSidebar from '../components/AccountComponents/AccountSidebar/AccountSidebar'
 
 const { PersonalInfo, OrdersComp, AddressComp,PaymentComp, PasswordComp  } = Components;
 

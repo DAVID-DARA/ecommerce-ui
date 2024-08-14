@@ -1,12 +1,18 @@
-import "./VerifyPage.css";
-import Logo_Header from "../../components/logo-header/Logo";
-import { useEffect, useRef, useState } from "react";
-import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator";
-import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+
+import styles from "./VerifyPage.module.css";
 import axiosClient from "../../api/axiosClient";
+import Logo_Header from "../../components/logo-header/Logo";
+import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator";
+import useAssetsLoader from "../../hooks/useAssetsLoader";
+import Preloader from "../../components/Preloader/Preloader";
 
 const VerifyPage = () => {
+    const assets = [ Logo_Header];
+    const assetsLoading = useAssetsLoader(assets);
+
     const inputs = useRef([]);
     const [email, setEmail] = useState("example@gmail.com");
     const [otp, setOtp] = useState(Array(6).fill(""));
@@ -70,7 +76,7 @@ const VerifyPage = () => {
                 if (response.status === 200 ) {
                     console.log(response.data.token);
                     localStorage.setItem("accessToken", response.data.token);
-                    navigate("/");
+                    navigate("/user/account");
                 }
             })
             .catch((error) => {
@@ -89,18 +95,22 @@ const VerifyPage = () => {
             });
     };
 
+    if (assetsLoading) {
+        return <Preloader />
+    }
+
     return (
         <>
-            <div className="verify">
-                <div className="verify-section">
-                    <div className="verify-left">
-                        <div className="verify-left-content">
+            <div className={styles.verify}>
+                <div className={styles.verify_section}>
+                    <div className={styles.verify_left}>
+                        <div className={styles.verify_left_content}>
                             <Logo_Header />
-                            <p className="verify-left-head">Verify Code</p>
-                            <p className="verify-left-text-one">Please enter the code we just sent to {email}</p>
+                            <p className={styles.verify_left_head}>Verify Code</p>
+                            <p className={styles.verify_left_text_one}>Please enter the code we just sent to {email}</p>
 
-                            <p className="verify-box-head">Code *</p>
-                            <div className="verify-input-box">
+                            <p className={styles.verify_box_head}>Code *</p>
+                            <div className={styles.verify_input_box}>
                                 {otp.map((value, index) => (
                                     <input
                                         key={index.toString()}
@@ -135,15 +145,15 @@ const VerifyPage = () => {
 
                             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-                            <button className="verify-button" onClick={sendVerificationRequest}>
+                            <button className={styles.verify_button} onClick={sendVerificationRequest}>
                                 {loading ? <LoadingIndicator size={14} /> : "Verify"}
                             </button>
-                            <p className="verify-resend-text">
-                                Didn't receive code? <button className="verify-resend-button">Resend Code</button>
+                            <p className={styles.verify_resend_text}>
+                                Didn't receive code? <button className={styles.verify_resend_button}>Resend Code</button>
                             </p>
                         </div>
                     </div>
-                    <div className="verify-right"></div>
+                    <div className={styles.verify_right}></div>
                 </div>
             </div>
         </>

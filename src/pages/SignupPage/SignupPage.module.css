@@ -54,12 +54,16 @@
 .name {
     width: 100%;
     padding: 8px;
+    border: 1px solid;
+    margin: 5px 0;
 }
 
 .signupInput {
     width: 95%;
-    padding: 8px;
+    padding: 10px;
     margin: 5px 0 15px 0;
+    border: 1px solid;
+
 }
 
 input[type="checkbox"] {

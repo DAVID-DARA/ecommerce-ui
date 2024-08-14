@@ -1,9 +1,9 @@
-import axios from "axios";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import axiosClient from "../../api/axiosClient";
 import styles from "./LoginPage.module.css";
 import Logo_Header from "../../components/logo-header/Logo";
 import google from "../../assets/new-icons/google.png";
@@ -43,7 +43,7 @@ const LoginPage = () => {
             setError("");
 
             try {
-                const response = await axios.post("http://localhost:4032/api/user/login", values);
+                const response = await axiosClient.post("http://localhost:4032/api/user/login", values);
                 if (response.status === 200) {
                     localStorage.setItem("accessToken", response.data.token);
                     navigate("/");
