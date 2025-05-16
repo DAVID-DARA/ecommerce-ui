@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import AppRoutes from "./routes/AppRoutes";
 
-const App =() => {
-
+const App = () => {
   return (
     <>
-      <h1>Lorem Ipsum</h1>
+      <AppRoutes />
     </>
-  )
+  );
 };
 
-export default App
+export default App;
