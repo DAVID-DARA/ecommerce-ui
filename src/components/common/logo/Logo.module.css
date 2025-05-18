@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Love Light';
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+        .logoLink:active {
+            color: black;
+        }

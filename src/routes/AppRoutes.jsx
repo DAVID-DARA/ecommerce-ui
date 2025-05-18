@@ -1,17 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import HomePage from "../pages/HomePage/HomePage";
 
 const AppRoutes = () => {
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <h1>Welcome to Lorem Lorem</h1>
-        }
-    ])
-        
-    return (
-        <RouterProvider router={router} />
-    )
-}
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+  ]);
 
+  return <RouterProvider router={router} />;
+};
 
 export default AppRoutes;
