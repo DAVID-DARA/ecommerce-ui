@@ -12,43 +12,43 @@ const Navbar = () => {
             <Logo />
           </div>
           <div className={styles.middle}>
-            <ul>
-              <li>
+            <ul className={styles.navList}>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Home
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Shop
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Women
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Men
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Accessories
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Contact Us
                 </Link>
               </li>
-              <li>
+              <li className={styles.navListItems}>
                 <Link className={styles.link_deco} to="/">
                   Blog
                 </Link>
